@@ -27,7 +27,10 @@ public class MyTest extends JUnitStories {
 	
 	@Override
 	public Configuration configuration() {
-		return new MostUsefulConfiguration().useStoryLoader(new LoadFromClasspath(getClass().getClassLoader())).useStoryReporterBuilder(new StoryReporterBuilder().withFormats(Format.CONSOLE, Format.STATS, Format.HTML));
+		return new MostUsefulConfiguration()
+				.useStoryLoader(new LoadFromClasspath(this.getClass().getClassLoader()))
+				.useStoryReporterBuilder(new StoryReporterBuilder()
+						.withFormats(Format.CONSOLE, Format.STATS, Format.HTML));
 	}
 	
 	@Override

@@ -12,14 +12,92 @@
 <div class="beforeStorySteps">
 </div>
 <div class="scenario">
-<h2>Scenario: Search on Google</h2>
+<h2>Scenario: Renter searches for listing</h2>
 <div class="step successful">Given the browser is open</div>
-<div class="step successful">And the page <span class="step parameter">http://www.google.com</span> is displayed</div>
-<div class="step successful">When I search for <span class="step parameter">SDU</span></div>
-<div class="step successful">Then the content <span class="step parameter">Syddansk Universitet</span> is displayed</div>
+<div class="step successful">And the page <span class="step parameter">http://localhost:3000</span> is displayed</div>
+<div class="step successful">Then the system shows results for more cities than just <span class="step parameter">Odense</span></div>
+<div class="step successful">When <span class="step parameter">Morten</span> searches for <span class="step parameter">Odense</span> with certain criteria</div>
+<div class="step pending">Then The system shows a full list of all available listings in Odense that matches criteria <span class="keyword pending">(PENDING)</span></div>
+<div class="step pending">And He chooses a listing <span class="keyword pending">(PENDING)</span></div>
+<div class="step pending">Then The contact information of the owner of that listing is presented <span class="keyword pending">(PENDING)</span></div>
+<div><pre class="pending">@Then(&quot;The system shows a full list of all available listings in Odense that matches criteria&quot;)
+@Pending
+public void thenTheSystemShowsAFullListOfAllAvailableListingsInOdenseThatMatchesCriteria() {
+  // PENDING
+}
+</pre></div>
+<div><pre class="pending">@Then(&quot;He chooses a listing&quot;)
+@Pending
+public void thenHeChoosesAListing() {
+  // PENDING
+}
+</pre></div>
+<div><pre class="pending">@Then(&quot;The contact information of the owner of that listing is presented&quot;)
+@Pending
+public void thenTheContactInformationOfTheOwnerOfThatListingIsPresented() {
+  // PENDING
+}
+</pre></div>
 </div>
-<div class="afterStorySteps">
+<div class="scenario">
+<h2>Scenario: Renter adds criteria to search</h2>
+<div class="step successful">Given the browser is open</div>
+<div class="step successful">And the page <span class="step parameter">http://localhost:3000</span> is displayed</div>
+<div class="step pending">Given The unfiltered list is presented to Morten <span class="keyword pending">(PENDING)</span></div>
+<div class="step pending">When He types price range into price range field <span class="keyword pending">(PENDING)</span></div>
+<div class="step pending">And He clicks on amount of rooms he wishes <span class="keyword pending">(PENDING)</span></div>
+<div class="step pending">And He clicks on pets allowed <span class="keyword pending">(PENDING)</span></div>
+<div class="step pending">And He clicks on &lsquo;own bathroom&rsquo; <span class="keyword pending">(PENDING)</span></div>
+<div class="step pending">Then The listings get narrowed down based on the criteria <span class="keyword pending">(PENDING)</span></div>
+<div class="step pending">And Listings in Odense that matches above criteria are presented to Morten
+
+Narrative:
+As (a renter) I want to be able to give a review of my landlord, to make sure that other people know that she was a good landlord <span class="keyword pending">(PENDING)</span></div>
+<div><pre class="pending">@Given(&quot;The unfiltered list is presented to Morten&quot;)
+@Pending
+public void givenTheUnfilteredListIsPresentedToMorten() {
+  // PENDING
+}
+</pre></div>
+<div><pre class="pending">@When(&quot;He types price range into price range field&quot;)
+@Pending
+public void whenHeTypesPriceRangeIntoPriceRangeField() {
+  // PENDING
+}
+</pre></div>
+<div><pre class="pending">@When(&quot;He clicks on amount of rooms he wishes&quot;)
+@Pending
+public void whenHeClicksOnAmountOfRoomsHeWishes() {
+  // PENDING
+}
+</pre></div>
+<div><pre class="pending">@When(&quot;He clicks on pets allowed&quot;)
+@Pending
+public void whenHeClicksOnPetsAllowed() {
+  // PENDING
+}
+</pre></div>
+<div><pre class="pending">@When(&quot;He clicks on \u2018own bathroom\u2019&quot;)
+@Pending
+public void whenHeClicksOnownBathroom() {
+  // PENDING
+}
+</pre></div>
+<div><pre class="pending">@Then(&quot;The listings get narrowed down based on the criteria&quot;)
+@Pending
+public void thenTheListingsGetNarrowedDownBasedOnTheCriteria() {
+  // PENDING
+}
+</pre></div>
+<div><pre class="pending">@Then(&quot;Listings in Odense that matches above criteria are presented to Morten\n\nNarrative:\nAs (a renter) I want to be able to give a review of my landlord, to make sure that other people know that she was a good landlord&quot;)
+@Pending
+public void thenListingsInOdenseThatMatchesAboveCriteriaArePresentedToMortenNarrativeAsaRenterIWantToBeAbleToGiveAReviewOfMyLandlordToMakeSureThatOtherPeopleKnowThatSheWasAGoodLandlord() {
+  // PENDING
+}
+</pre></div>
 </div>
+<div class="scenario">
+<h2>Scenario: Renter gives review of landlord</h2>
 </div>
 
 </body>
