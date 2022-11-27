@@ -72,6 +72,30 @@ public class MySteps extends Steps {
         submitButton.click();
     }
 
+    @Then("the system shows a full list of all available listings in $city that matches criteria")
+    public void showContent(String city) {
+        WebElement[] listings = driver.findElements(By.className("apartmentCard")).toArray(new WebElement[0]);
+
+        for (int i = 0; i < listings.length; i++) {
+            String listingCity = listings[i].findElement(By.className("city")).getText();
+            Assert.assertTrue(listingCity.contains(city));
+        }
+
+    }
+
+    @Then("he chooses a listing")
+    public void chooseFirstListing() {
+        WebElement[] listings = driver.findElements(By.className("apartmentCard")).toArray(new WebElement[0]);
+        listings[0].click();
+    }
+
+    @Then("the contact information of the owner of that listing is presented")
+    public void seeContactInfo() {
+        WebElement realtorContact = driver.findElement(By.id("realtorContact"));
+
+        Assert.assertNotNull(realtorContact);
+    }
+
     @AfterStory
     public void closeSession() {
         driver.quit();

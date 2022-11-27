@@ -1,0 +1,36 @@
+<div class="story">
+<h1>Sample story</h1>
+<div class="path">stories/sample.story</div>
+<div class="beforeStorySteps">
+</div>
+<div class="scenario">
+<h2>Scenario: Renter searches for listing</h2>
+<div class="step successful">Given the browser is open</div>
+<div class="step successful">And the page <span class="step parameter">http://localhost:3000</span> is displayed</div>
+<div class="step successful">Then the system shows results for more cities than just <span class="step parameter">Odense</span></div>
+<div class="step successful">When <span class="step parameter">Morten</span> searches for <span class="step parameter">Odense</span> with certain criteria</div>
+<div class="step successful">Then the system shows a full list of all available listings in <span class="step parameter">Odense</span> that matches criteria</div>
+<div class="step successful">And he chooses a listing</div>
+<div class="step successful">Then the contact information of the owner of that listing is presented</div>
+<div class="comment">!-- Scenario: Renter adds criteria to search</div>
+<div class="step ignorable">!-- Given the browser is open</div>
+<div class="step ignorable">!-- And the page http://localhost:3000 is displayed</div>
+<div class="step ignorable">!-- Given The unfiltered list is presented to Morten</div>
+<div class="step ignorable">!-- When He types price range into price range field</div>
+<div class="step ignorable">!-- And He clicks on amount of rooms he wishes</div>
+<div class="step ignorable">!-- And He clicks on pets allowed</div>
+<div class="step ignorable">!-- And He clicks on &lsquo;own bathroom&rsquo;</div>
+<div class="step ignorable">!-- Then The listings get narrowed down based on the criteria</div>
+<div class="step ignorable">!-- And Listings in Odense that matches above criteria are presented to Morten</div>
+<div class="step pending">!--
+!-- Narrative: <span class="keyword pending">(PENDING)</span></div>
+<div class="comment">!-- As (a renter) I want to be able to give a review of my landlord, to make sure that other people know that she was a good landlord</div>
+<div class="step pending">!--
+!-- Scenario: Renter gives review of landlord <span class="keyword pending">(PENDING)</span></div>
+<div class="comment">!-- Given: The landlords profile page is presented to Sophie</div>
+<div class="comment">!-- When: Sophie clicks on the &ldquo;add review&rdquo;-button</div>
+<div class="comment">!-- And: Sophie clicks on 5 stars</div>
+<div class="comment">!-- And: Sophie writes a small review in the &lsquo;reason&rsquo;-field</div>
+<div class="comment">!-- And: Sophie presses the &lsquo;submit&rsquo;-button</div>
+<div class="comment">!-- Then: The review is posted to her landlords profile-page</div>
+<div class="comment">!-- And: Sophies&rsquo; review of the landlord is presented so other people can see it</div>
