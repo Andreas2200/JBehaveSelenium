@@ -23,15 +23,20 @@
 <div class="step successful">And he clicks on pets allowed</div>
 <div class="step successful">And he clicks on own bathroom</div>
 <div class="step successful">Then the listings get narrowed down based on the criteria</div>
-<div class="step successful">And listings in Odense that matches above criteria are presented to Morten</div>
-<div class="comment">!-- Narrative:</div>
-<div class="comment">!-- As (a renter) I want to be able to give a review of my landlord, to make sure that other people know that she was a good landlord</div>
-<div class="step pending">!--
-!-- Scenario: Renter gives review of landlord <span class="keyword pending">(PENDING)</span></div>
-<div class="comment">!-- Given: The landlords profile page is presented to Sophie</div>
-<div class="comment">!-- When: Sophie clicks on the &ldquo;add review&rdquo;-button</div>
-<div class="comment">!-- And: Sophie clicks on 5 stars</div>
-<div class="comment">!-- And: Sophie writes a small review in the &lsquo;reason&rsquo;-field</div>
-<div class="comment">!-- And: Sophie presses the &lsquo;submit&rsquo;-button</div>
-<div class="comment">!-- Then: The review is posted to her landlords profile-page</div>
-<div class="comment">!-- And: Sophies&rsquo; review of the landlord is presented so other people can see it</div>
+<div class="step successful">And listings in Odense that matches above criteria are presented to Morten
+
+Narrative:
+As (a renter) I want to be able to give a review of my landlord, to make sure that other people know that she was a good landlord</div>
+</div>
+<div class="scenario">
+<h2>Scenario: Renter gives review of landlord</h2>
+<div class="step successful">Given the browser is open</div>
+<div class="step successful">And the page <span class="step parameter">http://localhost:3000/realtor</span> is displayed</div>
+<div class="step successful">When <span class="step parameter">Sophie</span> clicks on <span class="step parameter">5</span> stars</div>
+<div class="step successful">And Sophie writes a small review in the &lsquo;reason&rsquo;-field</div>
+<div class="step successful">And Sophie presses the &lsquo;submit&rsquo;-button</div>
+<div class="step successful">Then The review is posted to her landlords profile-page</div>
+</div>
+<div class="afterStorySteps">
+</div>
+</div>
