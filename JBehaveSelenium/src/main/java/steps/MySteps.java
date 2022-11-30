@@ -94,8 +94,6 @@ public class MySteps extends Steps {
         WebElement realtorContact = driver.findElement(By.id("realtorContact"));
         Assert.assertNotNull(realtorContact);
     }
-
-<<<<<<< HEAD
     @Given("the unfiltered list is presented to $name")
     public void seeList() {
         WebElement[] listings = driver.findElements(By.className("apartmentCard")).toArray(new WebElement[0]);
@@ -140,7 +138,8 @@ public class MySteps extends Steps {
     public void seeListNew() {
         WebElement[] listings = driver.findElements(By.className("apartmentCard")).toArray(new WebElement[0]);
         Assert.assertNotNull(listings);
-=======
+    }
+
     @When("$name clicks on $value stars")
     public void clickReview(String name, String value) {
         WebElement starInput = driver.findElement(By.id("starInput"));
@@ -165,7 +164,6 @@ public class MySteps extends Steps {
     public void checkReviewIsPresent() {
         WebElement[] reviews = driver.findElements(By.className("review")).toArray(new WebElement[0]);
         Assert.assertTrue(reviews.length == 3);
->>>>>>> f9990d9 (adds review test)
     }
 
     @AfterStory
