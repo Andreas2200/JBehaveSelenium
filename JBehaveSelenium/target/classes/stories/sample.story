@@ -12,6 +12,7 @@ Then the system shows a full list of all available listings in Odense that match
 And he chooses a listing
 Then the contact information of the owner of that listing is presented
 
+<<<<<<< HEAD
 Scenario: Renter adds criteria to search
 Given the browser is open
 And the page http://localhost:3000/search is displayed
@@ -34,3 +35,15 @@ And listings in Odense that matches above criteria are presented to Morten
 !-- And: Sophie presses the ‘submit’-button
 !-- Then: The review is posted to her landlords profile-page
 !-- And: Sophies’ review of the landlord is presented so other people can see it
+=======
+Narrative:
+As (a renter) I want to be able to give a review of my landlord, to make sure that other people know that she was a good landlord
+
+Scenario: Renter gives review of landlord
+Given the browser is open
+And the page http://localhost:3000/realtor is displayed
+When Sophie clicks on 5 stars
+And Sophie writes a small review in the ‘reason’-field
+And Sophie presses the ‘submit’-button
+Then The review is posted to her landlords profile-page
+>>>>>>> f9990d9 (adds review test)

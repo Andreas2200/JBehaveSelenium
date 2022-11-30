@@ -1,6 +1,13 @@
 #org.jbehave.core.embedder.StoryManager
+<<<<<<< HEAD
 #Wed Nov 30 16:14:14 CET 2022
 total=4000
 stories/sample.story=4000
 threadAverage=4000
+=======
+#Wed Nov 30 16:14:19 CET 2022
+total=3000
+stories/sample.story=3000
+threadAverage=3000
+>>>>>>> f9990d9 (adds review test)
 threads=1

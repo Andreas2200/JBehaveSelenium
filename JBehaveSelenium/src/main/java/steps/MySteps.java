@@ -95,6 +95,7 @@ public class MySteps extends Steps {
         Assert.assertNotNull(realtorContact);
     }
 
+<<<<<<< HEAD
     @Given("the unfiltered list is presented to $name")
     public void seeList() {
         WebElement[] listings = driver.findElements(By.className("apartmentCard")).toArray(new WebElement[0]);
@@ -139,6 +140,32 @@ public class MySteps extends Steps {
     public void seeListNew() {
         WebElement[] listings = driver.findElements(By.className("apartmentCard")).toArray(new WebElement[0]);
         Assert.assertNotNull(listings);
+=======
+    @When("$name clicks on $value stars")
+    public void clickReview(String name, String value) {
+        WebElement starInput = driver.findElement(By.id("starInput"));
+        Assert.assertNotNull(starInput);
+        starInput.sendKeys(value);
+    }
+
+    @When("$name writes a small review in the ‘reason’-field")
+    public void writeReview() {
+        WebElement reviewText = driver.findElement(By.id("reviewText"));
+        Assert.assertNotNull(reviewText);
+        reviewText.sendKeys("This landlord is great");
+    }
+    @When("$name presses the ‘submit’-button")
+    public void submitReview() {
+        WebElement submitButton = driver.findElement(By.id("reviewSubmit"));
+        Assert.assertNotNull(submitButton);
+        submitButton.click();
+    }
+
+    @Then("The review is posted to her landlords profile-page")
+    public void checkReviewIsPresent() {
+        WebElement[] reviews = driver.findElements(By.className("review")).toArray(new WebElement[0]);
+        Assert.assertTrue(reviews.length == 3);
+>>>>>>> f9990d9 (adds review test)
     }
 
     @AfterStory

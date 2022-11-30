@@ -23,14 +23,13 @@ And he clicks on own bathroom
 Then the listings get narrowed down based on the criteria
 And listings in Odense that matches above criteria are presented to Morten
 
-!-- Narrative:
-!-- As (a renter) I want to be able to give a review of my landlord, to make sure that other people know that she was a good landlord
-!--
-!-- Scenario: Renter gives review of landlord
-!-- Given: The landlords profile page is presented to Sophie
-!-- When: Sophie clicks on the “add review”-button
-!-- And: Sophie clicks on 5 stars
-!-- And: Sophie writes a small review in the ‘reason’-field
-!-- And: Sophie presses the ‘submit’-button
-!-- Then: The review is posted to her landlords profile-page
-!-- And: Sophies’ review of the landlord is presented so other people can see it
+Narrative:
+As (a renter) I want to be able to give a review of my landlord, to make sure that other people know that she was a good landlord
+
+Scenario: Renter gives review of landlord
+Given the browser is open
+And the page http://localhost:3000/realtor is displayed
+When Sophie clicks on 5 stars
+And Sophie writes a small review in the ‘reason’-field
+And Sophie presses the ‘submit’-button
+Then The review is posted to her landlords profile-page

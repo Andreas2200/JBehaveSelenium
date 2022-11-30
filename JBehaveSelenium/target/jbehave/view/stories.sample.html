@@ -19,6 +19,7 @@
 <div class="step successful">When <span class="step parameter">Morten</span> searches for <span class="step parameter">Odense</span> with certain criteria</div>
 <div class="step successful">Then the system shows a full list of all available listings in <span class="step parameter">Odense</span> that matches criteria</div>
 <div class="step successful">And he chooses a listing</div>
+<<<<<<< HEAD
 <div class="step successful">Then the contact information of the owner of that listing is presented</div>
 </div>
 <div class="scenario">
@@ -43,6 +44,31 @@
 <div class="comment">!-- And: Sophie presses the &lsquo;submit&rsquo;-button</div>
 <div class="comment">!-- Then: The review is posted to her landlords profile-page</div>
 <div class="comment">!-- And: Sophies&rsquo; review of the landlord is presented so other people can see it</div>
+=======
+<div class="step pending">Then the contact information of the owner of that listing is presented
+
+Narrative:
+As (a renter) I want to be able to give a review of my landlord, to make sure that other people know that she was a good landlord <span class="keyword pending">(PENDING)</span></div>
+<div><pre class="pending">@Then(&quot;the contact information of the owner of that listing is presented\n\nNarrative:\nAs (a renter) I want to be able to give a review of my landlord, to make sure that other people know that she was a good landlord&quot;)
+@Pending
+public void thenTheContactInformationOfTheOwnerOfThatListingIsPresentedNarrativeAsaRenterIWantToBeAbleToGiveAReviewOfMyLandlordToMakeSureThatOtherPeopleKnowThatSheWasAGoodLandlord() {
+  // PENDING
+}
+</pre></div>
+</div>
+<div class="scenario">
+<h2>Scenario: Renter gives review of landlord</h2>
+<div class="step successful">Given the browser is open</div>
+<div class="step successful">And the page <span class="step parameter">http://localhost:3000/realtor</span> is displayed</div>
+<div class="step successful">When <span class="step parameter">Sophie</span> clicks on <span class="step parameter">5</span> stars</div>
+<div class="step successful">And Sophie writes a small review in the &lsquo;reason&rsquo;-field</div>
+<div class="step successful">And Sophie presses the &lsquo;submit&rsquo;-button</div>
+<div class="step successful">Then The review is posted to her landlords profile-page</div>
+</div>
+<div class="afterStorySteps">
+</div>
+</div>
+>>>>>>> f9990d9 (adds review test)
 
 </body>
 <!--  SyntaxHighlighter resources:  should be included at end of body -->
