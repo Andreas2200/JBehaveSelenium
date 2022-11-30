@@ -12,18 +12,19 @@
 <div class="step successful">Then the system shows a full list of all available listings in <span class="step parameter">Odense</span> that matches criteria</div>
 <div class="step successful">And he chooses a listing</div>
 <div class="step successful">Then the contact information of the owner of that listing is presented</div>
-<div class="comment">!-- Scenario: Renter adds criteria to search</div>
-<div class="step ignorable">!-- Given the browser is open</div>
-<div class="step ignorable">!-- And the page http://localhost:3000 is displayed</div>
-<div class="step ignorable">!-- Given The unfiltered list is presented to Morten</div>
-<div class="step ignorable">!-- When He types price range into price range field</div>
-<div class="step ignorable">!-- And He clicks on amount of rooms he wishes</div>
-<div class="step ignorable">!-- And He clicks on pets allowed</div>
-<div class="step ignorable">!-- And He clicks on &lsquo;own bathroom&rsquo;</div>
-<div class="step ignorable">!-- Then The listings get narrowed down based on the criteria</div>
-<div class="step ignorable">!-- And Listings in Odense that matches above criteria are presented to Morten</div>
-<div class="step pending">!--
-!-- Narrative: <span class="keyword pending">(PENDING)</span></div>
+</div>
+<div class="scenario">
+<h2>Scenario: Renter adds criteria to search</h2>
+<div class="step successful">Given the browser is open</div>
+<div class="step successful">And the page <span class="step parameter">http://localhost:3000/search</span> is displayed</div>
+<div class="step successful">Given the unfiltered list is presented to Morten</div>
+<div class="step successful">When he types <span class="step parameter">8000</span> range into price range field</div>
+<div class="step successful">And he clicks on amount of rooms he wishes</div>
+<div class="step successful">And he clicks on pets allowed</div>
+<div class="step successful">And he clicks on own bathroom</div>
+<div class="step successful">Then the listings get narrowed down based on the criteria</div>
+<div class="step successful">And listings in Odense that matches above criteria are presented to Morten</div>
+<div class="comment">!-- Narrative:</div>
 <div class="comment">!-- As (a renter) I want to be able to give a review of my landlord, to make sure that other people know that she was a good landlord</div>
 <div class="step pending">!--
 !-- Scenario: Renter gives review of landlord <span class="keyword pending">(PENDING)</span></div>

@@ -12,17 +12,17 @@ Then the system shows a full list of all available listings in Odense that match
 And he chooses a listing
 Then the contact information of the owner of that listing is presented
 
-!-- Scenario: Renter adds criteria to search
-!-- Given the browser is open
-!-- And the page http://localhost:3000 is displayed
-!-- Given The unfiltered list is presented to Morten
-!-- When He types price range into price range field
-!-- And He clicks on amount of rooms he wishes
-!-- And He clicks on pets allowed
-!-- And He clicks on ‘own bathroom’
-!-- Then The listings get narrowed down based on the criteria
-!-- And Listings in Odense that matches above criteria are presented to Morten
-!--
+Scenario: Renter adds criteria to search
+Given the browser is open
+And the page http://localhost:3000/search is displayed
+Given the unfiltered list is presented to Morten
+When he types 8000 range into price range field
+And he clicks on amount of rooms he wishes
+And he clicks on pets allowed
+And he clicks on own bathroom
+Then the listings get narrowed down based on the criteria
+And listings in Odense that matches above criteria are presented to Morten
+
 !-- Narrative:
 !-- As (a renter) I want to be able to give a review of my landlord, to make sure that other people know that she was a good landlord
 !--

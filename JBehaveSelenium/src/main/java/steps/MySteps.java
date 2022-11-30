@@ -92,8 +92,53 @@ public class MySteps extends Steps {
     @Then("the contact information of the owner of that listing is presented")
     public void seeContactInfo() {
         WebElement realtorContact = driver.findElement(By.id("realtorContact"));
-
         Assert.assertNotNull(realtorContact);
+    }
+
+    @Given("the unfiltered list is presented to $name")
+    public void seeList() {
+        WebElement[] listings = driver.findElements(By.className("apartmentCard")).toArray(new WebElement[0]);
+        Assert.assertNotNull(listings);
+    }
+
+    @When("he types $price range into price range field")
+    public void enterPrice(String price) {
+        WebElement priceRange = driver.findElement(By.id("rent"));
+        Assert.assertNotNull(priceRange);
+        priceRange.sendKeys(price);
+    }
+
+    @When("he clicks on amount of rooms he wishes")
+    public void amountRooms() {
+        WebElement roomRange = driver.findElement(By.id("rooms"));
+        Assert.assertNotNull(roomRange);
+        roomRange.sendKeys("3");
+    }
+
+    @When("he clicks on pets allowed")
+    public void selectPets() {
+        WebElement pets = driver.findElement(By.id("animals"));
+        Assert.assertNotNull(pets);
+        pets.sendKeys(" ");
+    }
+
+    @When("he clicks on own bathroom")
+    public void selectBathroom() {
+        WebElement bathroom = driver.findElement(By.id("bath"));
+        Assert.assertNotNull(bathroom);
+        bathroom.sendKeys(" ");
+    }
+
+    @Then("the listings get narrowed down based on the criteria")
+    public void seeListNarrow() {
+        WebElement[] listings = driver.findElements(By.className("apartmentCard")).toArray(new WebElement[0]);
+        Assert.assertNotNull(listings);
+    }
+
+    @Then("listings in $city that matches above criteria are presented to $name")
+    public void seeListNew() {
+        WebElement[] listings = driver.findElements(By.className("apartmentCard")).toArray(new WebElement[0]);
+        Assert.assertNotNull(listings);
     }
 
     @AfterStory
